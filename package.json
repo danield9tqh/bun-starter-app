@@ -6,9 +6,8 @@
   "main": "src/index.tsx",
   "module": "src/index.tsx",
   "scripts": {
-    "dev": "bun --hot src/index.tsx",
-    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
-    "start": "NODE_ENV=production bun src/index.tsx"
+    "dev": "bun --hot dev.tsx",
+    "deploy": "cd infra && wrangler deploy"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.142.8",
@@ -22,6 +21,7 @@
     "@hono/zod-validator": "^0.7.6",
     "@types/bun": "latest",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "wrangler": "^4.54.0"
   }
 }
