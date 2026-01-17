@@ -4,7 +4,7 @@ Full-stack starter template with Bun runtime, Hono backend, and React frontend.
 
 ## To Start
 
-Run `bun create github.com/danield9tqh/bun-starter-app your-app-name`
+Run `bun create danield9tqh/typescript-start app-name`
 
 Run `bun install` and `bun dev` to start dev.
 
