@@ -41,7 +41,7 @@ await Bun.build({
 // Generate migrations from schema
 console.log("🔄 Generating migrations from schema...");
 await $`drizzle-kit generate --dialect=sqlite --schema=./auth/db-schema.ts --out=./infra/migrations`.cwd(
-  rootDir
+  rootDir,
 );
 
 // Create D1 Database with migrations
@@ -74,6 +74,7 @@ const worker = await Worker("worker", {
   url: true,
   adopt: true,
   assets: {
+    run_worker_first: ["/api/*"],
     not_found_handling: "single-page-application",
   },
   observability: {
