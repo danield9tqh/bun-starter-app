@@ -24,16 +24,6 @@
     "react-dom": "^19",
     "zod": "^4.2.1"
   },
-  "bun-create": {
-    "start": [
-      "echo 'bun dev -- for local dev'",
-      "echo 'bun infra/configure -- configure deploy'"
-    ],
-    "postinstall": [
-      "echo 'bun dev -- for local dev'",
-      "echo 'bun infra/configure -- configure deploy'"
-    ]
-  },
   "devDependencies": {
     "@clack/prompts": "^0.11.0",
     "@cloudflare/workers-types": "^4.20260107.1",
