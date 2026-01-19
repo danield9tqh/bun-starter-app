@@ -92,7 +92,7 @@ if (fs.existsSync(envPath)) {
 
 // Write .env file
 const env = {
-  CLOUDFLARE_DOMAIN: domain,
+  CUSTOM_DOMAIN: domain,
   ALCHEMY_PASSWORD: alchemyPassword,
 };
 const envContent =
