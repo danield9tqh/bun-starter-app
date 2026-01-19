@@ -65,7 +65,6 @@ async function getDomain(): Promise<string> {
 }
 
 // Run bunx alchemy configure
-console.log("Running alchemy configure...");
 try {
   execSync("bunx alchemy configure", { stdio: "inherit" });
 } catch {
