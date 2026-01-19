@@ -31,7 +31,6 @@
     "@types/bun": "latest",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "drizzle-kit": "^0.31.8",
-    "wrangler": "^4.54.0"
+    "drizzle-kit": "^0.31.8"
   }
 }
