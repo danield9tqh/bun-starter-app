@@ -8,6 +8,7 @@ import * as fs from "fs";
 import * as crypto from "crypto";
 import { createCloudflareApi } from "alchemy/cloudflare";
 import { outro, select, text, isCancel, log } from "@clack/prompts";
+import pc from "picocolors";
 import pkg from "../package.json" assert { type: "json" };
 
 // Prompts user to select or enter a domain
@@ -95,4 +96,7 @@ const envContent =
     .join("\n") + "\n";
 fs.writeFileSync(envPath, envContent);
 
-outro(`Configuration complete! Domain: ${domain}`);
+log.info(`CUSTOM_DOMAIN and ALCHEMY_PASSWORD written to .env file.`);
+outro(
+  `Configuration complete! Run ${pc.cyan("bun run deploy")} to deploy to ${domain}`,
+);
